@@ -4,13 +4,16 @@ https://jwt.io/introduction/
 
 Implements: https://github.com/tuupola/slim-jwt-auth
 
-Step 1:
-Add this to `Userfrosting/public/.htaccess` :
+## Setup
+
+If you're using Apache/Httpd :
+Add this to `Userfrosting/public/.htaccess` within the `<IfModule mod_rewrite.c>` section:
 
 ```RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]```
 
-Step 2:
 Add a secret key to `.env` with name `UF_API_SECRET`, minimum 256 bits recommended.
+
+## Use
 
 Tokenised routes are protected behind `/api` by default, but this can be changed in your config file, with parameter `tokeniser.path`
 
@@ -20,12 +23,18 @@ There is a protected test route located at `/api/test` which required token base
 
 In your site sprinkle, you can creates new routes behind `/api` e.g. `/api/your/custom/route` and they will automatically be protected by a JSON web token.
 
+## Test 
+
 To test from Command line, try:
 
 `curl -k -H "Authorization: Bearer your-generated-json-web-token" "http://localhost/api/test"`
 
+## Docs
 To read more on how to generate JWT's, see:
+
 https://jwt.io/introduction/
+
 https://jwt.io/#debugger
 
-On the server side i use Python PyJwt to generate tokens (https://github.com/jpadilla/pyjwt/), however many packages are available for languages: https://jwt.io/#libraries-io
+On the server side i use Python PyJwt to generate tokens (https://github.com/jpadilla/pyjwt/), however many packages are available for languages: 
+https://jwt.io/#libraries-io
