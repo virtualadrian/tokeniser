@@ -14,5 +14,13 @@
             'relaxed' => [],
             'secret' => getenv('UF_API_SECRET'),
             'secure' => True
+        ],
+        'csrf' => [
+            'blacklist' => [
+                '^\/api\/' => [
+                    'POST',
+                    'PUT'
+                ]
+            ]
         ]
     ];
