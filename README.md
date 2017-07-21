@@ -6,12 +6,13 @@ Implements: https://github.com/tuupola/slim-jwt-auth
 
 ## Setup
 
-If you're using Apache/Httpd :
-Add this to `Userfrosting/public/.htaccess` within the `<IfModule mod_rewrite.c>` section:
+### Step 1
+Add a secret key to `.env` with name `UF_API_SECRET`, minimum 256 bits recommended.
+
+### Step 2 (Apache/Httpd Only)
+If you're using Apache/Httpd you will need to modify te htaccess file located in `Userfrosting/public/.htaccess` to enable HTTP Authorization with Bearer tokens. Add the following line between the `<IfModule mod_rewrite.c>` section tags:
 
 ```RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]```
-
-Add a secret key to `.env` with name `UF_API_SECRET`, minimum 256 bits recommended.
 
 ## Use
 
