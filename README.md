@@ -37,5 +37,5 @@ https://jwt.io/introduction/
 
 https://jwt.io/#debugger
 
-On the server side i use Python PyJwt to generate tokens (https://github.com/jpadilla/pyjwt/), however many packages are available for languages: 
+On the client side you will probably need a third party package to generate the signed tokens (i like python https://github.com/jpadilla/pyjwt/), however packages are available for most languages: 
 https://jwt.io/#libraries-io
