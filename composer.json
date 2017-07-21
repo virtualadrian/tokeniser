@@ -1,0 +1,20 @@
+{
+    "name": "x00x70/tokeniser",
+    "type": "userfrosting-sprinkle",
+    "description": "Sprinkle for managing API token based authentication",
+    "authors" : [
+        {
+            "name": "x00x70"
+        }
+    ],
+    "version": "1.0",
+    "require": {
+        "php": ">=5.6",
+        "tuupola/slim-jwt-auth": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UserFrosting\\Sprinkle\\Tokeniser\\": "src/"
+        }
+    }
+}
