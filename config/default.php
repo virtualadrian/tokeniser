@@ -7,8 +7,8 @@
 
     return [
         'tokeniser' => [
-        	'algorithm' => ["HS256", "HS512", "HS384"],
-        	'attribute' => 'tokeniser',
+            'algorithm' => ["HS256", "HS512", "HS384"],
+            'attribute' => 'tokeniser',
             'ignore' => ['/api/ping'],
             'path' => ['/api'],
             'relaxed' => [],
