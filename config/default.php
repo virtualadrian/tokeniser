@@ -17,7 +17,7 @@
         ],
         'csrf' => [
             'blacklist' => [
-                '^\/api\/' => [
+                '^/api/' => [
                     'POST',
                     'PUT'
                 ]
